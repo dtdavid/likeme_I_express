@@ -1,0 +1,9 @@
+# Ignorar el node_modules y .env del Backend
+node_modules/
+.env
+
+# Ignorar el node_modules del Frontend
+Frontend/node_modules/
+
+# Ignorar el notes_express
+notes_express.md
