@@ -23,10 +23,18 @@ Aplicación web que permite a los usuarios crear publicaciones con título, desc
 
 ## 📁 Estructura del proyecto
 
-```
-project/ ├── Backend/ │ ├── app.js # Configuración de Express │ ├── index.js # Arranque del servidor │ ├── db/ │ │ ├── db.js # Conexión a PostgreSQL │ │ └── likeme.sql # Script para crear la tabla │ ├── models/ │ │ └── posts_model.js # Consultas SQL │ ├── controllers/ │ │ └── post_controller.js # Lógica de endpoints │ ├── routers/ │ │ └── postRouter.js # Define las rutas │ └── .env # Variables de entorno
-
-```
+project/
+├── db/
+│ ├── db.js # Conexión con PostgreSQL usando Pool
+│ └── likeme.sql # Script para crear la tabla
+├── controllers/
+│ └── post_controller.js # Funciones que responden a las rutas
+├── models/
+│ └── posts_model.js # Consultas a la base de datos
+├── routers/
+│ └── postRouter.js # Define endpoints y rutas
+├── index.js # Servidor Express
+├── app.js # Configuración general del servidor
 
 # Like Me (Parte I)
 
