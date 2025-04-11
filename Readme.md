@@ -46,12 +46,6 @@ Este proyecto es una red social mínima donde los usuarios pueden crear publicac
 - Frontend: React, Vite, Axios
 - Herramientas: Thunder Client, PGAdmin
 
-## 📁 Estructura del proyecto
-
-/Backend |-- controllers/ |-- db/ |-- models/ |-- routers/ |-- app.js |-- index.js
-
-/Frontend |-- src/ |-- App.jsx |-- main.jsx
-
 ## ⚙️ Instrucciones para correr el proyecto
 
 ### Backend

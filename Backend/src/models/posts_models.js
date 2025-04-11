@@ -28,9 +28,53 @@ export const addPost = async (titulo, img, descripcion, likes = 0) => {
             error: error.message
         });
         throw error; // Propaga el error para manejarlo en el controlador
+    }      
+}
+// Función para actualizar los likes de un post
+export const updatePostModels = async (id) => {
+    const query = `
+        UPDATE posts
+        SET likes = likes + 1
+        WHERE id = $1
+        RETURNING *;  
+    `; // El RETURNING * devuelve el registro actualizado en cuanto a los likes que tenga, el resto de campos quedará igual
+    const values = [id];
+
+    try {
+        const result = await pool.query(query, values);
+        return result;
+    } catch (error) {
+        console.error('Error en la consulta SQL:', {
+            query,
+            values,
+            error: error.message
+        });
+        throw error; // Propaga el error para manejarlo en el controlador
     }
-        
+}
+
+// Función para eliminar un registro de la base de datos
+
+export const deletePostModels = async (id) => {
+    const query = `
+        DELETE FROM posts
+        WHERE id = $1
+        RETURNING *; 
+    `; // El RETURNING * devuelve el registro eliminado, si es necesario
+    const values = [id];
+
+    try {
+        const result = await pool.query(query, values);
+        return result;
+    } catch (error) {
+        console.error('Error en la consulta SQL:', {
+            query,
+            values,
+            error: error.message
+        });
+        throw error; // Propaga el error para manejarlo en el controlador
     }
+}
    
 
 
