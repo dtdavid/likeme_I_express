@@ -26,7 +26,7 @@ Aplicación web que permite a los usuarios crear publicaciones con título, desc
 project/
 ├── db/
 │ ├── db.js # Conexión con PostgreSQL usando Pool
-│ └── likeme.sql # Script para crear la tabla
+│ └── likeme.sql # Script para crear la tabla posts
 ├── controllers/
 │ └── post_controller.js # Funciones que responden a las rutas
 ├── models/
@@ -67,3 +67,19 @@ Este proyecto es una red social mínima donde los usuarios pueden crear publicac
 2. Acceder desde **http://localhost:3000**
    a. GET /posts -> Devuelve todos los posts
    b. POST /posts -> Crea un nuevo post
+   c. PUT /posts/like/:id -> Incrementar likes de un post
+   d. DELETE /post/:id -> Eliminar un post
+
+✅ Funcionalidades
+
+- Crear publicaciones con título, descripción e imagen
+- Visualizar todos los posts
+- Dar likes a publicaciones
+- Eliminar publicaciones
+
+🧪 Pruebas
+Puedes usar **Thunder Client** o **Postman** para probar las rutas del backend.
+
+📬 Contacto
+Si tienes dudas, sugerencias o feedback:
+📧 david.docampo@gmail.com
