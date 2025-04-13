@@ -15,4 +15,4 @@ pool.query('SELECT NOW()')
 
 app.listen(PORT, () => {
     console.log(`Servidor en http://localhost:${PORT}`);
-});
+}); // se arranca el servidor de Express en el puerto elegido, normalmente 3000
